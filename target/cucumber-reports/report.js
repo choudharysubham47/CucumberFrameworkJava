@@ -33,21 +33,21 @@ formatter.match({
   "location": "LoginSteps.user_is_on_the_login_page()"
 });
 formatter.result({
-  "duration": 9708299299,
+  "duration": 9495056898,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.title_of_the_login_page_is()"
 });
 formatter.result({
-  "duration": 27361116,
+  "duration": 28007568,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.close_the_browser()"
 });
 formatter.result({
-  "duration": 286767937,
+  "duration": 385955889,
   "status": "passed"
 });
 });
