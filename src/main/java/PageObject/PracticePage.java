@@ -15,6 +15,10 @@ public class PracticePage {
         PageFactory.initElements(rdriver, this);
     }
 
+    //@FindBy(xpath = "//a[normalize-space()='PracticePage']")
+    //@CacheLookup
+   // WebElement button;
+
     @FindBy(id ="userId")
     @CacheLookup
     WebElement email;
@@ -31,20 +35,37 @@ public class PracticePage {
     @CacheLookup
     WebElement sButton;
 
-    public void setEmail(String emailid)
+   // public void clickButton()
+    //{
+   //     button.click();
+    //}
+    public void setEmail(String uname)
     {
-        email.clear();
-        email.sendKeys(emailid);
+        try {
+            email.clear();
+            email.sendKeys(uname);
+        }
+        catch(NullPointerException e) {
+            System.out.println("NullPointerException thrown!");
+        }
     }
-    public void setPass(String password)
+    public void setPass(String pwd)
     {
+        try {
             pass.click();
-            pass.sendKeys(password);
+            pass.sendKeys(pwd);
+        }
+        catch(NullPointerException e) {
+            System.out.println("NullPointerException thrown!");}
     }
-    public void setCompany(String comp)
+    public void setCompany(String comp) throws Exception
     {
+        try
+        {
             company.clear();
-            company.sendKeys(comp);
+            company.sendKeys(comp);}
+        catch(NullPointerException e) {
+            System.out.println("NullPointerException thrown!");}
     }
     public void clickSubmitButton()
     {
