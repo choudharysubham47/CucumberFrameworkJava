@@ -22,7 +22,7 @@ public class LoginSteps extends BaseClass {
         driver = new ChromeDriver(options);
         driver.get("https://selectorshub.com/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @When("^title of the homepage is$")
